@@ -1,0 +1,6 @@
+#!/bin/bash
+export GUROBI_HOME="/home/bause/gurobi903/linux64"
+export PATH="/home/bause/gurobi903/linux64/bin"
+export LD_LIBRARY_PATH="/home/bause/gurobi903/linux64/lib"
+export GRB_LICENSE_FILE="/home/bause/gurobi.lic"
+/usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.library.path=lib:/home/bause/gurobi903/linux64/lib -cp bin:lib/jcommander-1.58.jar:lib/elki-bundle-0.7.6-SNAPSHOT.jar:lib/gxl.jar:lib/javailp-1.2a.jar:lib/gurobi.jar cli.EmbAssiCLI "$@"

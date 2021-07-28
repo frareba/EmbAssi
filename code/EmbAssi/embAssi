@@ -1,0 +1,2 @@
+#!/bin/bash
+java -Djava.library.path=lib -cp bin:lib/jcommander-1.58.jar:lib/elki-bundle-0.7.6-SNAPSHOT.jar:lib/gxl.jar:lib/javailp-1.2a.jar:lib/gurobi.jar cli.EmbAssiCLI "$@"
