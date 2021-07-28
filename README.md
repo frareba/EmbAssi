@@ -8,54 +8,45 @@ Gurobi and a Gurobi license are needed for computation of the exact graph edit d
 
 The results are written to *results.txt*.
 
-**Required parameters:**
-    -d, --dataset
-      Name of dataset
-    -m, --method
-      Method to be used
+**Required parameters:**  
+    `-d, --dataset` Name of dataset  
+    `-m, --method` Method to be used  
 Possible methods are:
 * *CLB* (EmbAssi with clb)
 * *CStar*
 * *Branch*
 * *SLF*
-* *LinD*
-A thorough description of these methods can be found in our paper and the corresponding references.
-      
-**Optional parameters:**
-    -clb, --clb
-      Use CLB in a prefiltering step
-    -cA, --compareApprox
-      Compare different approximations (Gurobi is needed for this)
-    -knn, --knnSearch
-      Change type of query to knn
-    -qn, --queryNumber
-      Number of queries
-      Default: 50
-    -qr, --queryRange
-      Maximum Range or k, depending on the query type
-      Default: 5
-    -r, --raw
-      Does the dataset have disconnected graphs, edge labels or any 
-      attributes? 
+* *LinD*  
+
+A thorough description of these methods can be found in our paper and the corresponding references.  
+
+
+**Optional parameters:**  
+    `-clb`, `--clb` Use CLB in a prefiltering step (Acceleration with EmbAssi)  
+    `-cA`, `--compareApprox` Compare different approximations (Gurobi is needed for this)  
+    `-knn`, `--knnSearch` Change type of query to knn  
+    `-qn`, `--queryNumber` Number of queries (Default: 50)  
+    `-qr`, `--queryRange` Maximum Range or k, depending on the query type (Default: 5)  
+    `-r`, `--raw` Does the dataset have disconnected graphs, edge labels or any attributes?  
 
 
 ### Examples
-The following command accelerates the method "CStar" using EmbAssi, making the filtering step for 50 range queries on the graphs in the dataset MUTAG for thresholds 1 to 5:
+The following command accelerates the method "CStar" using EmbAssi, making the filtering step for 50 range queries on the graphs in the dataset *MUTAG* for thresholds 1 to 5:  
 
-./embAssi -d MUTAG -m CStar -clb
+`./embAssi -d MUTAG -m CStar -clb`
 
-The following command makes the filtering step for 50 range queries on the graphs in the dataset MUTAG for thresholds 1 to 5, using only the method "CStar", without acceleration:
+The following command makes the filtering step for 50 range queries on the graphs in the dataset *MUTAG* for thresholds 1 to 5, using only the method "CStar", without acceleration:  
 
-./embAssi -d MUTAG -m CStar
+`./embAssi -d MUTAG -m CStar`
 
     
 ## Datasets
 The repository contains the dataset *MUTAG* only. Further data sets in the required format are available from the website [TUDatasets: A collection of benchmark datasets for graph classification and regression.](https://chrsmrrs.github.io/datasets/).
-The dataset *Protein_Complexes* can be found [here](https://github.com/BiancaStoecker/complex-similarity-evaluation/tree/master/simulated_complexes/true_constraints) and *Chembl_27* [here](https://chembl.gitbook.io/chembl-interface-documentation/downloads).
+The dataset *Protein_Complexes* can be found [here](https://github.com/BiancaStoecker/complex-similarity-evaluation/tree/master/simulated_complexes/true_constraints) and *Chembl_27* [here](https://chembl.gitbook.io/chembl-interface-documentation/downloads).  
 
-Please note that edge labels, as well as attributes, are currently not supported.
-Important:
-If the dataset has disconnected graphs, edge labels or any attributes, these have to be removed first (using -r or --raw will generate a dataset with maximum of one discrete label per vertex and only connected graphs (keeping the largest connected component of each graph))). A preprocessed dataset (called dsName_p) will be generated and used for the experiments.
+Please note that edge labels, as well as attributes, are currently not supported.  
+Important:  
+If the dataset has disconnected graphs, edge labels or any attributes, these have to be removed first (using `-r` or `--raw` will generate a dataset with maximum of one discrete label per vertex and only connected graphs (keeping the largest connected component of each graph)). A preprocessed dataset (called *dsName_p*) will be generated and used for the experiments.
 
 ## Terms and conditions
 When using our code please cite our paper.
