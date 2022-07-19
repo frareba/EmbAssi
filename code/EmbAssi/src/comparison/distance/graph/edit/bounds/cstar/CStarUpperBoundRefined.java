@@ -17,8 +17,7 @@ public class CStarUpperBoundRefined<V,E> implements GraphEditDistanceUpperBound<
 	{
 		this.gedAssign = new GraphEditDistanceAssignmentValue<>(new StarEditDistance<>());
 		this.refinement = new SimpleLocalSearch<>();
-		this.graphEditCosts = graphEditCosts;//new GraphEditCosts<>(1, 1, 1, 1, new ZeroDistance(), new IdentityDistance());
-		//this.graphEditCosts = new GraphEditCosts<>();
+		this.graphEditCosts = graphEditCosts;
 		
 	}
 	@Override

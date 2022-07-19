@@ -30,7 +30,7 @@ public class GetAttrDataset {
 	 */
 	public static AttrDataset getAttrDataset(String dsName) throws IOException
 	{
-		String path = "/home/bause/Desktop/datasets/";
+		String path = "/home/bause/datasets/";
 		return getAttrDataset(path, dsName);
 	}
 	//TODO: this could be extended to only reading parts of the dataset and so on

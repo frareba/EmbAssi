@@ -49,7 +49,8 @@ Important:
 If the dataset has disconnected graphs, edge labels or any attributes, these have to be removed first (using `-r` or `--raw` will generate a dataset with maximum of one discrete label per vertex and only connected graphs (keeping the largest connected component of each graph)). A preprocessed dataset (called *dsName_p*) will be generated and used for the experiments.
 
 ## Terms and conditions
-When using our code please cite our paper.
+When using our code please cite our paper [EmbAssi: embedding assignment costs for similarity search in large graph databases](https://doi.org/10.1007/s10618-022-00850-3):
+Bause, F., Schubert, E. & Kriege, N.M. EmbAssi: embedding assignment costs for similarity search in large graph databases. Data Min Knowl Disc (2022). https://doi.org/10.1007/s10618-022-00850-3
 
 
 ## References

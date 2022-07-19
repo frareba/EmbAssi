@@ -146,7 +146,6 @@ public class EmbAssiCLI {
 		//queries 1 - max threshold
 		e.run(queries, cm.queryR);
 		
-		
 		System.out.println();
 	}
 	

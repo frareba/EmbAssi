@@ -74,7 +74,7 @@ public class ExperimentsEmbAssi {
 				this.ref = new LinDSimilaritySearchEmbAssi<Attributes, Attributes>(gec,this.ds);
 				long timeEnd = System.nanoTime();
 				long time = timeEnd - timeStart;
-				tw.write("Preprocessing LinD "+String.format(Locale.ENGLISH, "%1.2f", (double)time/(double)1000000000));
+				tw.write("Preprocessing LinD "+String.format(Locale.ENGLISH, "%1.2f", (double)time/(double)1000000));
 				tw.newLine();
 				tw.close();
 				break;
@@ -96,7 +96,7 @@ public class ExperimentsEmbAssi {
 			this.lbi = new LowerBoundIndex(ds, vectorDistance, false);
 			long timeEnd = System.nanoTime();
 			long time = timeEnd - timeStart;
-			tw.write("Preprocessing EmbAssi "+String.format(Locale.ENGLISH, "%1.2f", (double)time/(double)1000000000));
+			tw.write("Preprocessing EmbAssi "+String.format(Locale.ENGLISH, "%1.2f", (double)time/(double)1000000));
 			tw.newLine();
 			tw.close();
 		}
@@ -205,7 +205,7 @@ public class ExperimentsEmbAssi {
 				System.out.println();
 				tw.write(String.format(Locale.ENGLISH, "%1.2f",((double)candidates)/((double)queries.size())-1)+ "		");
 				tw.write(String.format(Locale.ENGLISH, "%1.2f",(((double)results)/((double)queries.size()))-1)+ "		");
-				tw.write(String.format(Locale.ENGLISH, "%1.2f", (double)fulltime/(double)1000000000)+ "\n");
+				tw.write(String.format(Locale.ENGLISH, "%1.2f", (double)fulltime/(double)1000000)+ "\n");
 			}
 			tw.flush();
 			System.out.println("CLB is done!");
@@ -261,7 +261,7 @@ public class ExperimentsEmbAssi {
 				System.out.println();
 				tw.write(String.format(Locale.ENGLISH, "%1.2f",((double)candidates)/((double)queries.size())-1)+ "		");
 				tw.write(String.format(Locale.ENGLISH, "%1.2f",(((double)results)/((double)queries.size()))-1)+ "		");
-				tw.write(String.format(Locale.ENGLISH, "%1.2f", (double)fulltime/(double)1000000000)+ "\n");
+				tw.write(String.format(Locale.ENGLISH, "%1.2f", (double)fulltime/(double)1000000)+ "\n");
 			}
 		}
 		tw.flush();

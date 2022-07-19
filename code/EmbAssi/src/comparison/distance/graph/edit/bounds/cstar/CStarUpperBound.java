@@ -16,7 +16,7 @@ public class CStarUpperBound<V,E> implements GraphEditDistanceUpperBound<V,E>,As
 	public CStarUpperBound(GraphEditCosts<V, E> graphEditCosts)
 	{
 		this.gedAssign = new GraphEditDistanceAssignmentValue<>(new StarEditDistance<>());
-		this.graphEditCosts = graphEditCosts;//new GraphEditCosts<>(1, 1, 1, 1, new ZeroDistance(), new IdentityDistance());
+		this.graphEditCosts = graphEditCosts;
 	}
 	@Override
 	public double compute(LGraph<V, E> g1, LGraph<V, E> g2) {

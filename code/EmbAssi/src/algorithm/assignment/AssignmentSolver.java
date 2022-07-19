@@ -176,6 +176,5 @@ public abstract class AssignmentSolver {
 			
 			return assignment;
 		}
-		
 	}
 }
