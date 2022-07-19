@@ -1,5 +1,5 @@
 # EmbAssi
-Source code for the paper EmbAssi: Embedding Assignment Costs for Similarity Search in Large Graph Databases, Franka Bause, Erich Schubert, Nils M. Kriege, 2021.
+Source code for the paper: Bause, F., Schubert, E. & Kriege, N.M. EmbAssi: embedding assignment costs for similarity search in large graph databases. Data Min Knowl Disc (2022). https://doi.org/10.1007/s10618-022-00850-3
 
 ## Usage
 The algorithms contained in this package for searching in graph databases can be executed via a command line interface. Edit the shell script *embAssi_gurobi*, to reflect your Gurobi setup and run it (or use the script *embAssi*) to see a list of all available methods and parameters.
